@@ -1,15 +1,13 @@
 import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
 
 export default function Index() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: "transparent", }}>
-        <StatusBar translucent backgroundColor="transparent" style="light" />
+      <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
           source={require("@/assets/images/background-image.png")}
-          style={StyleSheet.absoluteFillObject}
+          style={styles.background}
           resizeMode="cover"
         >
           <View style={styles.container}>
@@ -47,6 +45,12 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  background: {
+    flex: 1,
+    justifyContent: "center",
+    width: "100%",
+    height: Dimensions.get("window").height,
   },
   companyLogo: {
     width: "100%",
