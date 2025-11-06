@@ -1,5 +1,5 @@
 import { Text, TextInput, View, TouchableOpacity, Image, ScrollView } from "react-native";
-import { styles } from "@/styles";
+import { styles } from "@/styles/_signinstyle";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
@@ -10,7 +10,7 @@ export default function Index() {
         <ScrollView contentContainerStyle={{ paddingBottom: 40 }} showsVerticalScrollIndicator={false}>
           <View style={styles.navGroup}>
             <Ionicons name="arrow-back" size={25} />
-            <Image source={require('@/assets/images/logo.png')} />
+            <Image source={require('@/assets/images/Logo.png')} />
           </View>
           <Text style={styles.largeText}>Sign in to your</Text>
           <Text style={styles.largeText}>Account</Text>
